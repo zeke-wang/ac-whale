@@ -13,16 +13,13 @@ class _AppPageState extends State<AppPage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [const HomePage(), const AdminPage()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text('AC-WHALE'),
         ),
-        // body: IndexedStack(
-        //   index: _currentIndex,
-        //   children: _pages,
-        // ),
         body: _pages[_currentIndex],
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
